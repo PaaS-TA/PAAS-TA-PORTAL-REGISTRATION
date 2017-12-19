@@ -1,2 +1,2 @@
-# openPaasPaastaPortalRegistration
+# PAAS-TA-PORTAL-REGISTRATION
 v2.0
