@@ -16,7 +16,7 @@ apply plugin: 'spring-boot'
 apply plugin: "io.spring.dependency-management"
 
 war {
-    baseName = 'paasta-portal-registration'
+    baseName = 'paasta-portal-registration2'
     version '1.0'
 }
 
