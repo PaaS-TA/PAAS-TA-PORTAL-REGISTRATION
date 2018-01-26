@@ -1,0 +1,6 @@
+spring:
+  application:
+      name: PortalRegistration
+
+server:
+  port: ${PORT:2221}
