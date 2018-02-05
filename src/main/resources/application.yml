@@ -1,6 +1,9 @@
 spring:
   application:
       name: PortalRegistration
-
+  boot:
+    admin:
+      url: http://localhost:3000
 server:
   port: ${PORT:2221}
+
