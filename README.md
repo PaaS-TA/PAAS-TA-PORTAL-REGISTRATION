@@ -1,7 +1,7 @@
 # PAAS-TA-PORTAL-REGISTRATION
 
 ## 버전 정보
-Portal v3.0의 Sprint1의 개발중인 버전이다.
+Portal v2.0의 Sprint1의 개발중인 버전이다.
 
 
 
@@ -18,7 +18,11 @@ application 이름으로 등록 Eureka에 등록을 할 경우 다른 applicatio
 ## 유의사항
 
 개발 정보
-- gradle 2.14 버전
 - java 1.8 버전
+- SpringCloud Edgware.RELEASE 
+- TomcatEmded 8.5.14
+- Gradle 4.4.1
+- Spring-boot 1.5.9
+- Redis 1.3.1
 
 
