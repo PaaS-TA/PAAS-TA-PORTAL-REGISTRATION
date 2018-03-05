@@ -10,20 +10,14 @@ buildscript {
     }
 }
 
-ext {
-    springCloudVersion = 'Edgware.RELEASE'
-	springBootAdminVersion = '1.5.7'
-}
-
 apply plugin: 'java'
-apply plugin: 'idea'
-apply plugin: 'eclipse'
-apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
-apply plugin: 'jacoco'
+apply plugin: 'war'
+apply plugin: 'spring-boot'
+apply plugin: "io.spring.dependency-management"
 
-jar {
-    baseName = 'paas-ta-portal-registration'
+war {
+    baseName = 'paasta-portal-registration'
+    version '1.0'
 }
 
 sourceCompatibility = 1.8
@@ -33,16 +27,16 @@ repositories {
     mavenCentral()
 }
 
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.cloud:spring-cloud-netflix:1.0.7.RELEASE'
+    }
+}
+
+
 dependencies {
-    //Admin Server Setting
-    compile ('de.codecentric:spring-boot-admin-starter-client')
-
-    //Eureka
-    compile ('org.springframework.cloud:spring-cloud-starter-eureka')
-
-    compile('org.springframework.cloud:spring-cloud-starter-config')
-    compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
-    compile ("de.codecentric:spring-boot-admin-starter-client:${springBootAdminVersion}")
+    compile ('org.springframework.cloud:spring-cloud-starter-eureka-server')
 }
 
 dependencyManagement {
