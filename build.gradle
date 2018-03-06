@@ -10,6 +10,10 @@ buildscript {
     }
 }
 
+ext {
+    springCloudVersion = 'Edgware.RELEASE'
+}
+
 apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'spring-boot'
