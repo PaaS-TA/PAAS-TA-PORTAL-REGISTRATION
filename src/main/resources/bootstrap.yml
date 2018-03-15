@@ -6,12 +6,5 @@ spring:
       uri: http://localhost:8004
 
 server:
-  port: ${PORT:8080}
+  port: ${PORT:2221}
 
-# Discovery Server Access
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://127.0.0.1:2221/eureka/
-  instance:
-    hostname: localhost
