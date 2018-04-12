@@ -18,4 +18,5 @@ public class RegistrationServerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(RegistrationServerApplication.class, args);
 	}
+
 }
