@@ -1,14 +1,9 @@
 # PAAS-TA-PORTAL-REGISTRATION
 
-## Eureka Server
-Eureka 란? Spring Cloud에서 제공하는 서비스이다.
-Eureka는 스몰 DNS 서버의 의미로 생각할 수 있는 서비스이다. 
-application 이름으로 등록 Eureka에 등록을 할 경우 다른 application 들도(Eureka등록이 되어 있어야함) 그이름으로 특정 서비스를 찾을 수 있다.
-
-장점
-- 서버가 새롭게 추가되면, Config를 수정없이 다른 Application들이 찾아서 사용할 수 있다.
-- 서버가 종료되면, 자동으로 목록에서 삭제하여 별도의 수정없이 연결을 제한할 수 있다.
-- 로드밸런싱을 제공한다.
+## REGISTRATION
+Spring-cloud 프로젝트의 Service discovery server로 Eureka 를 사용한 어플리케이션이다. 
+포탈에서 사용하는 어플리케이션을 portal-registration 에 서비스로 등록하여 등록된 서비스들은 registration 서버에 등록한 서비스 이름으로 데이터를 요청한다. 
+또한 등록된 서비스들의 상태를 확인 할 수 있는 UI를 제공한다.
 
 ## 유의사항
 
