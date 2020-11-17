@@ -1,0 +1,22 @@
+applications:
+  - name: portal-registration
+    memory: 1G
+    instances: 1
+    buildpacks:
+    - java_buildpack
+    routes:
+    - route: portal-registration.<DOMAIN>
+    path: build/libs/paas-ta-portal-registration.jar
+    env:
+      server_port: 80
+
+      spring_application_name: PortalRegistration
+
+      eureka_server_enableSelfPreservation: true
+      eureka_instance_hostname: ${vcap.application.uris[0]}
+      eureka_instance_nonSecurePort: 80
+      eureka_client_registerWithEureka: false
+      eureka_client_fetchRegistry: false
+      eureka_server_maxThreadsForPeerReplication: 0
+      eureka_client_server_waitTimeInMsWhenSyncEmpty: 0
+      eureka_client_serviceUrl_defaultZone: http://${vcap.application.uris[0]}/eureka/
