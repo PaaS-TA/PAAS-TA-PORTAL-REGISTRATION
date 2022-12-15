@@ -5,11 +5,13 @@ applications:
     buildpacks:
     - java_buildpack
     routes:
-    - route: portal-registration.<DOMAIN>
+    - route: portal-registration.<APP_DOMAIN>
     path: build/libs/paas-ta-portal-registration.jar
     env:
-      server_port: 80
-
+      server_port: 8080
+      
+      BP_JVM_VERSION: 8
+      BP_SPRING_CLOUD_BINDINGS_DISABLED: true
       spring_application_name: PortalRegistration
 
       eureka_server_enableSelfPreservation: true
